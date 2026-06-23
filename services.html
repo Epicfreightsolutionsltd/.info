@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>EPIC FREIGHT SOLUTIONS LTD</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            /* 🌍 FULL BACKGROUND IMAGE */
+            background: linear-gradient(rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.60)), url('img/m24.jpg') center center / cover no-repeat;
+            background-attachment: fixed;
+        }
+        /* HERO */
+        
+        .hero-navbar {
+            position: relative;
+            min-height: 300px;
+            border-radius: 50px;
+            margin: 25px;
+            overflow: hidden;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, .15);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, .35), 0 15px 30px rgba(0, 0, 0, .20);
+            animation: floatHero 6s ease-in-out infinite;
+        }
+        
+        .hero-navbar::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(rgba(0, 0, 0, .35), rgba(0, 0, 0, .35)), url('img/m24.jpg') center center/cover no-repeat;
+            opacity: 1;
+            z-index: 0;
+        }
+        
+        .hero-navbar * {
+            position: relative;
+            z-index: 2;
+        }
+        
+        @keyframes floatHero {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-12px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+        /* NAVBAR */
+        
+        .navbar {
+            background: rgba(0, 0, 0, .20) !important;
+            backdrop-filter: blur(10px);
+            border-radius: 25px;
+            margin: 20px;
+            padding: 15px 30px !important;
+            border: 1px solid rgba(255, 255, 255, .2);
+        }
+        
+        .semi-logo {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 4px solid #fff;
+        }
+        
+        .semi-logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .company-title {
+            color: #0d6efd;
+            font-weight: 800;
+            font-size: 2rem;
+            text-shadow: 0 2px 0 #004a99;
+        }
+        
+        .navbar-nav .nav-link {
+            color: #fff !important;
+            font-weight: 600;
+        }
+        
+        .navbar-nav .nav-link:hover {
+            color: #0d6efd !important;
+        }
+        
+        .btn-track {
+            border-radius: 15px;
+        }
+        /* SERVICES */
+        
+        .service-item {
+            position: relative;
+            overflow: hidden;
+            min-height: 300px;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            transition: all 0.4s ease;
+        }
+        
+        .service-item:hover {
+            transform: translateY(-8px);
+        }
+        
+        .service-item::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-size: cover;
+            background-position: center;
+            opacity: 0;
+            transition: 0.5s ease;
+        }
+        
+        .service-item:hover::before {
+            opacity: 1;
+        }
+        
+        .service-item::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(255, 255, 255, 0.08);
+            z-index: 1;
+        }
+        
+        .service-item i,
+        .service-item h4,
+        .service-item p {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .sea::before {
+            background-image: url('img/m0.jpg');
+        }
+        
+        .air::before {
+            background-image: url('img/m1.jpg');
+        }
+        
+        .road::before {
+            background-image: url('img/m2.jpg');
+        }
+        
+        .warehouse::before {
+            background-image: url('img/m14.jpg');
+        }
+        
+        .customs::before {
+            background-image: url('img/m4.jpg');
+        }
+        
+        .project::before {
+            background-image: url('img/m3.jpg');
+        }
+        /* FOOTER */
+        
+        .glass-footer {
+            margin: 0px;
+            border-radius: 0px;
+            overflow: hidden;
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+        }
+        
+        .glass-footer::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(rgba(0, 0, 0, .55), rgba(0, 0, 0, .55)), url('img/m.jpg') center/cover no-repeat;
+        }
+        
+        .glass-footer * {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .copyright {
+            text-align: center;
+            color: rgba(255, 255, 255, 0.8);
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HERO -->
+    <div class="container-xxl hero-navbar">
+
+        <nav class="navbar navbar-expand-lg navbar-dark">
+
+            <a href="index.html" class="navbar-brand p-0">
+                <div class="semi-logo">
+                    <img src="img/m00.jpg" alt="logo">
+                </div>
+            </a>
+
+            <h1 class="company-title m-0 ms-3">
+                <i class="fa fa-truck-fast me-2"></i> EPIC FREIGHT SOLUTIONS LTD
+            </h1>
+
+            <button class="navbar-toggler ms-auto" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="fa fa-bars"></span>
+        </button>
+
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+
+                <div class="navbar-nav ms-auto">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="about.html" class="nav-link">About</a>
+                    <a href="services.html" class="nav-link active">Services</a>
+                    <a href="tracking.html" class="nav-link">Tracking</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </div>
+
+                <a href="tracking.html" class="btn btn-primary btn-track ms-3">
+                Track Shipment
+            </a>
+
+            </div>
+        </nav>
+
+        <div class="text-center text-white mt-5">
+            <h1 class="display-4">Our Services</h1>
+            <p class="text-white-50">Complete logistics solutions across air, sea and land</p>
+        </div>
+
+    </div>
+
+    <!-- SERVICES -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-item sea rounded p-4 h-100">
+                        <i class="fa fa-3x fa-ship text-primary mb-3"></i>
+                        <h4 class="display-4 text-white mb-3">Sea Freight</h4>
+                        <p class="text-white-50">FCL (Full Container Load) and LCL (Less than Container Load) ocean shipping to and from major ports worldwide. Port to Port options.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-item rounded p-4 h-100">
+                        <i class="fa fa-3x fa-plane text-primary mb-3"></i>
+                        <h4 class="display-4 text-white mb-3">Air Freight</h4>
+                        <p class="text-white-50">Express and consolidated air cargo for time-critical shipments. Charter services available for oversized loads.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-item rounded p-4 h-100">
+                        <i class="fa fa-3x fa-truck text-primary mb-3"></i>
+                        <h4 class="display-4 text-white mb-3">Road Transport</h4>
+                        <p class="text-white-50">FTL and LTL trucking, cross-border haulage, and reliable last-mile delivery across our regional network.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-item rounded p-4 h-100">
+                        <i class="fa fa-3x fa-warehouse text-primary mb-3"></i>
+                        <h4 class="display-4 text-white mb-3">Warehousing</h4>
+                        <p class="text-white-50">Bonded and standard warehouses with inventory management, pick & pack, and distribution services.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-item rounded p-4 h-100">
+                        <i class="fa fa-3x fa-file-invoice text-primary mb-3"></i>
+                        <h4 class="display-4 text-white mb-3">Customs Clearance</h4>
+                        <p class="text-white-50">Licensed brokers handle import/export documentation, duty calculation and regulatory compliance.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-item rounded p-4 h-100">
+                        <i class="fa fa-3x fa-box-open text-primary mb-3"></i>
+                        <h4 class="display-4 text-white mb-3">Project Cargo</h4>
+                        <p class="text-white-50">Specialized handling for heavy, oversized, and out-of-gauge cargo including industrial equipment.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="container-fluid glass-footer text-light pt-5 mt-5">
+        <div class="container py-5">
+            <div class="row g-5">
+
+                <div class="col-lg-4">
+                    <h4 class="mb-4">EPIC FREIGHT SOLUTIONS LTD</h4>
+                    <p class="text-white-50">
+                        Global logistics & shipping solutions, built for modern supply chains.
+                    </p>
+                </div>
+
+                <div class="col-lg-4">
+                    <h4 class="mb-4">Contact</h4>
+
+                    <p>
+                        <i class="fa fa-map-marker-alt me-3"></i>
+                        <a href="https://maps.app.goo.gl/xMyTHJmcG6kpuXDs8" target="_blank">
+                        View Our Location
+                    </a>
+                    </p>
+
+                    <p>
+                        <i class="fa fa-phone-alt me-3"></i>
+                        <a href="tel:+233209351845">+233 20 935 1845</a> /
+                        <a href="tel:+233264111698">+233 26 411 1698</a>
+                    </p>
+
+                    <p>
+                        <i class="fa fa-envelope me-3"></i>
+                        <a href="mailto:salesepicfreightsolutionsltd@gmail.com">
+                        salesepicfreightsolutionsltd@gmail.com
+                    </a>
+                    </p>
+                </div>
+
+                <div class="col-lg-4">
+                    <h4 class="mb-4">Quick Links</h4>
+
+                    <p><a class="btn btn-link" href="about.html">About</a></p>
+                    <p><a class="btn btn-link" href="tracking.html">Tracking</a></p>
+                    <p><a class="btn btn-link" href="contact.html">Contact</a></p>
+                </div>
+            </div>
+
+            <div class="copyright">
+                © 2026 EPIC FREIGHT SOLUTIONS LTD
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

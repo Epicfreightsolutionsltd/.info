@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>EPIC FREIGHT SOLUTIONS LTD</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        /* Background Image */
+        
+        .hero-navbar {
+            background: linear-gradient(rgba(0, 0, 0, .35), rgba(0, 0, 0, .35)), url('img/m8.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height: 220px;
+            border-radius: 50px;
+            margin: 25px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, .15);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, .35), 0 15px 30px rgba(0, 0, 0, .20);
+            animation: floatHero 6s ease-in-out infinite;
+        }
+        /* Floating Animation */
+        
+        @keyframes floatHero {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-12px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+        /* Glass Navbar */
+        
+        .navbar {
+            background: rgba(0, 0, 0, .20) !important;
+            backdrop-filter: blur(10px);
+            border-radius: 25px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, .4);
+            margin: 20px;
+            padding: 15px 30px !important;
+            border: 1px solid rgba(255, 255, 255, .2);
+        }
+        /* Semi Circle Logo */
+        
+        .semi-logo {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 4px solid #fff;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, .35), 0 0 15px rgba(255, 255, 255, .2);
+            transition: all .3s ease;
+        }
+        
+        .semi-logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .semi-logo:hover {
+            transform: scale(1.08) rotate(5deg);
+        }
+        /* 3D Company Name */
+        
+        .company-title {
+            color: #0d6efd;
+            font-weight: 800;
+            font-size: 2rem;
+            text-shadow: 0 2px 0 #004a99, 0 4px 8px rgba(0, 0, 0, .5), 0 10px 20px rgba(0, 0, 0, .4);
+        }
+        /* Menu Links */
+        
+        .navbar-nav .nav-link {
+            color: #fff !important;
+            font-weight: 600;
+            margin: 0 10px;
+            transition: .3s;
+        }
+        
+        .navbar-nav .nav-link:hover,
+        .navbar-nav .nav-link.active {
+            color: #0d6efd !important;
+            transform: translateY(-2px);
+        }
+        /* Track Button */
+        
+        .btn-track {
+            border-radius: 15px;
+            padding: 10px 25px;
+            box-shadow: 0 8px 20px rgba(13, 110, 253, .4);
+        }
+        
+        @media(max-width:991px) {
+            .company-title {
+                font-size: 1.3rem;
+            }
+            .semi-logo {
+                width: 120px;
+                height: 60px;
+            }
+            /* FOOTER */
+            .glass-footer {
+                margin: 0px;
+                border-radius: 0px;
+                overflow: hidden;
+                background: rgba(255, 255, 255, 0.08);
+                backdrop-filter: blur(15px);
+                border: 1px solid rgba(255, 255, 255, 0.15);
+            }
+            .glass-footer::before {
+                content: "";
+                position: absolute;
+                inset: 0;
+                background: linear-gradient(rgba(0, 0, 0, .55), rgba(0, 0, 0, .55)), url('img/m.jpg') center/cover no-repeat;
+            }
+            .glass-footer * {
+                position: relative;
+                z-index: 2;
+            }
+            .copyright {
+                text-align: center;
+                color: rgba(255, 255, 255, 0.8);
+                margin-top: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container-xxl position-relative p-0 hero-navbar">
+
+        <nav class="navbar navbar-expand-lg navbar-dark">
+
+            <!-- Semi Circle Logo -->
+            <a href="index.html" class="navbar-brand p-0">
+                <div class="semi-logo">
+                    <img src="img/m00.jpg" alt="EPIC Freight">
+                </div>
+            </a>
+
+            <!-- Company Name -->
+            <h1 class="company-title m-0">
+                <i class="fa fa-truck-fast me-3"></i> EPIC FREIGHT SOLUTIONS LTD
+            </h1>
+
+            <!-- Mobile Toggle -->
+            <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="fa fa-bars"></span>
+        </button>
+
+            <!-- Menu -->
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+
+                <div class="navbar-nav ms-auto py-0 pe-4">
+                    <a href="index.html" class="nav-item nav-link active">Home</a>
+                    <a href="about.html" class="nav-item nav-link">About</a>
+                    <a href="services.html" class="nav-item nav-link">Services</a>
+                    <a href="tracking.html" class="nav-item nav-link">Tracking</a>
+                    <a href="contact.html" class="nav-item nav-link">Contact</a>
+                </div>
+                <div>
+                    <a href="tracking.html" class="btn btn-primary btn-track">
+                Track Shipment
+            </a>
+                </div>
+            </div>
+    </div>
+    </div>
+
+    </div>
+    </div>
+    </nav>
+
+    <style>
+        .page-header {
+            background: linear-gradient(rgba(0, 0, 0, .45), rgba(0, 0, 0, .45)), url('img/m8.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            border-radius: 50px;
+            margin: 25px;
+            padding: 80px 30px;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, .35), 0 15px 30px rgba(0, 0, 0, .20);
+            animation: floatTracking 6s ease-in-out infinite;
+        }
+        
+        .tracking-card {
+            background: linear-gradient(rgba(255, 255, 255, .95), rgba(255, 255, 255, .95)), url('img/m8.png');
+            background-size: cover;
+            background-position: center;
+            border-radius: 35px;
+            padding: 40px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, .15);
+            border: 1px solid rgba(255, 255, 255, .3);
+        }
+        
+        #trackForm {
+            background: rgba(255, 255, 255, .85);
+            backdrop-filter: blur(10px);
+            padding: 15px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, .1);
+        }
+        
+        #trackNo {
+            border-radius: 15px;
+        }
+        
+        #trackForm button {
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(13, 110, 253, .4);
+        }
+        
+        .tracking-status {
+            background: #fff;
+            border-left: 5px solid #0d6efd;
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, .08);
+            transition: .3s;
+        }
+        
+        .tracking-status:hover {
+            transform: translateY(-5px);
+        }
+        
+        @keyframes floatTracking {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+    </style>
+
+    <div class="page-header text-center">
+        <h1 class="display-4 text-white mb-3">
+            Track Your Shipment
+        </h1>
+        <p class="text-white-50">
+            Real-time visibility on every BL and container
+        </p>
+    </div>
+
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="tracking-card">
+
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+
+                        <form id="trackForm" class="d-flex mb-5">
+                            <input id="trackNo" class="form-control form-control-lg me-2" placeholder="Enter Tracking / BL number (try SPD-1029384)">
+
+                            <button class="btn btn-primary px-4" type="submit">
+                            Track
+                        </button>
+                        </form>
+
+                        <div id="result">
+
+                            <h4 class="mb-4">
+                                Shipment
+                                <span class="text-primary" id="resultId">
+                                SPD-1029384
+                            </span>
+                                <style>
+                                    .tracking-status {
+                                        position: relative;
+                                        background: #fff;
+                                        border-left: 5px solid #0d6efd;
+                                        border-radius: 15px;
+                                        padding: 20px;
+                                        margin-bottom: 20px;
+                                        box-shadow: 0 8px 20px rgba(0, 0, 0, .08);
+                                        transition: .3s;
+                                        overflow: visible;
+                                    }
+                                    
+                                    .tracking-status:hover {
+                                        transform: translateY(-5px);
+                                    }
+                                    
+                                    .status-image {
+                                        position: absolute;
+                                        top: 50%;
+                                        right: -270px;
+                                        transform: translateY(-50%) scale(.8);
+                                        width: 250px;
+                                        height: 150px;
+                                        object-fit: cover;
+                                        border-radius: 15px;
+                                        opacity: 0;
+                                        visibility: hidden;
+                                        box-shadow: 0 15px 30px rgba(0, 0, 0, .3);
+                                        transition: all .4s ease;
+                                        z-index: 100;
+                                    }
+                                    
+                                    .tracking-status:hover .status-image {
+                                        opacity: 1;
+                                        visibility: visible;
+                                        transform: translateY(-50%) scale(1);
+                                    }
+                                    
+                                    @media(max-width:991px) {
+                                        .status-image {
+                                            display: none;
+                                        }
+                                    }
+                                </style>
+
+                                <div class="tracking-status">
+                                    <strong>In Transit</strong><br>
+                                    <small class="text-muted">
+        May 11, 2026 • Port of Rotterdam
+    </small>
+                                    <p class="mb-0">
+                                        Container loaded onto vessel MV EPIC FREIGHT SOLUTIONS LTD STAR.
+                                    </p>
+
+                                    <img src="img/m23.jpg" class="status-image" alt="In Transit">
+                                </div>
+
+                                <div class="tracking-status">
+                                    <strong>Customs Cleared</strong><br>
+                                    <small class="text-muted">
+        May 09, 2026 • Hamburg
+    </small>
+                                    <p class="mb-0">
+                                        Export customs clearance completed.
+                                    </p>
+
+                                    <img src="img/customs.jpg" class="status-image" alt="Customs Cleared">
+                                </div>
+
+                                <div class="tracking-status">
+                                    <strong>Picked Up</strong><br>
+                                    <small class="text-muted">
+        May 07, 2026 • Berlin Warehouse
+    </small>
+                                    <p class="mb-0">
+                                        Cargo collected from shipper.
+                                    </p>
+
+                                    <img src="img/pickup.jpg" class="status-image" alt="Picked Up">
+                                </div>
+
+                                <div class="tracking-status">
+                                    <strong>Booking Confirmed</strong><br>
+                                    <small class="text-muted">
+        May 05, 2026
+    </small>
+                                    <p class="mb-0">
+                                        Shipment booked with EPIC FREIGHT SOLUTIONS LTD.
+                                    </p>
+
+                                    <img src="img/booking.jpg" class="status-image" alt="Booking Confirmed">
+                                </div>
+                                <p class="mb-0">
+                                    Shipment booked with EPIC FREIGHT SOLUTIONS LTD.
+                                </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid bg-dark text-light footer pt-5 mt-5">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-4">
+                    <h4 class="text-white mb-4">EPIC FREIGHT SOLUTIONS LTD</h4>
+                    <p>Global logistics & shipping solutions.</p>
+                </div>
+                <div class="col-lg-4">
+                    <h4 class="text-white mb-4">Contact</h4>
+                    <p><i class="fa fa-phone-alt me-3"></i><a href="tel:+233 20 935 1845 / +233 26 411 1698">+233 20 935 1845</a></p>
+                    <p><i class="fa fa-phone-alt me-3"></i><a href="tel:+233 20 935 1845 / +233 26 411 1698">+233 26 411 1698</a></p>
+                    <p><i class="fa fa-envelope me-3"></i><a href="mailto:salesepicfreightsolutionsltd@gmail.com">salesepicfreightsolutionsltd@gmail.com</a></p>
+                </div>
+                <div class="col-lg-4">
+                    <h4 class="text-white mb-4">Links</h4>
+                    <a class="btn btn-link" href="about.html">About</a>
+                    <a class="btn btn-link" href="services.html">Services</a>
+                    <a class="btn btn-link" href="contact.html">Contact</a>
+                </div>
+            </div>
+            <div class="copyright">&copy; <a href="#">EPIC FREIGHT SOLUTIONS LTD</a>, All Rights Reserved.</div>
+        </div>
+    </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById('trackForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            var v = document.getElementById('trackNo').value.trim() || 'SPD-1029384';
+            document.getElementById('resultId').textContent = v;
+            document.getElementById('result').classList.remove('d-none');
+        });
+    </script>
+</body>
+
+</html>

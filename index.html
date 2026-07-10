@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <title>EPIC FREIGHT SOLUTIONS LTD</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=-50">
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -16,52 +16,54 @@
             /* 🌍 Background image stays */
             background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(10, 10, 10, 0.55)), url('img/hero-cargo-ship.jpg') center center / cover no-repeat;
             background-attachment: fixed;
+             backdrop-filter: blur(5px);
+             
         }
         /* Background Image */
         
-        .hero-navbar {
-            background: linear-gradient(rgba(7, 7, 7, 0.35), rgba(0, 0, 0, .35)), url('img/hero-cargo-ship.jpg');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            min-height: 220px;
-            border-radius: 50px;
-            margin: 25px;
-            overflow: hidden;
-            border: 1px solid rgba(255, 255, 255, .15);
-            box-shadow: 0 30px 60px rgba(0, 0, 0, .35), 0 15px 30px rgba(0, 0, 0, .20);
-            animation: floatHero 6s ease-in-out infinite;
-        }
-        /* Floating Animation */
-        
-        @keyframes floatHero {
-            0% {
-                transform: translateY(0);
-            }
-            50% {
-                transform: translateY(-12px);
-            }
-            100% {
-                transform: translateY(0);
-            }
+        .hero-title {
+            font-size: clamp(3rem, 8vw, 6rem);
+            font-weight: 900;
+            background: url('img/m.jpg') center center/cover;
+            -webkit-background-clip: text;
+            background-clip: text;
+            backdrop-filter: blur(15px);
+            color: transparen;
+            -webkit-text-stroke: 1px rgb(249, 244, 244);
+            position: relative;
         }
         /* Glass Navbar */
         
         .navbar {
             background: rgba(0, 0, 0, .20) !important;
-            backdrop-filter: blur(10px);
-            border-radius: 25px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, .4);
-            margin: 20px;
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            width: calc(100% - 20px);
+            max-width: 1800px;
+            margin: 10px auto ;
+            /* Centers navbar */
             padding: 15px 30px !important;
+            border-radius: 205px;
             border: 1px solid rgba(255, 255, 255, .2);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, .4), inset 0 1px 1px rgba(255, 255, 255, .15);
+            .hero-navbar,
+            .container-fluid {
+                padding-left: 10 !important;
+                padding-right: 10 !important;
+                margin: 10 !important;
+                width: 100%;
+            }
+            body {
+                margin: 10;
+                overflow-x: hidden;
+            }
         }
         /* Semi Circle Logo */
         
         .semi-logo {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            border-radius: 100%;
             overflow: hidden;
             border: 4px solid #0e0101;
             box-shadow: 0 8px 20px rgba(0, 0, 0, .35), 0 0 15px rgba(255, 255, 255, .2);
@@ -112,49 +114,52 @@
                 font-size: 1.3rem;
             }
             .semi-logo {
-                width: 120px;
-                height: 60px;
+                width: 100px;
+                height: 100px;
             }
-            /* FOOTER */
-            .glass-footer {
-                margin: 0px;
-                border-radius: 0px;
-                overflow: hidden;
-                background: rgba(2, 2, 2, 0.08);
-                backdrop-filter: blur(15px);
-                border: 1px solid rgba(0, 0, 0, 0.15);
-            }
-            .glass-footer::before {
-                content: "";
-                position: absolute;
-                inset: 0;
-                background: linear-gradient(rgba(0, 0, 0, .55), rgba(7, 7, 7, 0.55)0.55)), url('img/m.jpg') center/cover no-repeat;
-            }
-            .glass-footer * {
-                position: relative;
-                z-index: 2;
-            }
-            .copyright {
-                text-align: center;
-                color: rgba(255, 255, 255, 0.8);
-                margin-top: 20px;
-            }
-            .glass-text-panel {
-                background: rgba(255, 255, 255, 0.07);
-                backdrop-filter: blur(20px);
-                -webkit-backdrop-filter: blur(20px);
-                border: 1px solid rgba(255, 255, 255, 0.18);
-                border-radius: 25px;
-                padding: 45px;
-                box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.2);
-                position: relative;
-                overflow: hidden;
-            }
+        }
+        /* FOOTER */
+        
+        .glass-footer {
+            margin: 0px;
+            border-radius: 0px;
+            overflow: hidden;
+            background: rgba(113, 105, 105, 0.08);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(176, 161, 161, 0.15);
+        }
+        /* FOOTER */
+        
+        .glass-footer {
+            margin: 0px;
+            border-radius: 0px;
+            overflow: hidden;
+            background: rgba(64, 24, 184, 0.93);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+        }
+        
+        .glass-footer::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(rgba(20, 24, 142, 0.55), rgba(86, 86, 210, 0.55)), url('img/m1.jpg') center/cover no-repeat;
+        }
+        
+        .glass-footer * {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .copyright {
+            text-align: center;
+            color: rgba(255, 255, 255, 0.8);
+            margin-top: 20px;
             /* ✨ glowing edge shimmer */
             .glass-text-panel::before {
                 content: "";
                 position: absolute;
-                inset: 0;
+                inset: 10px;
                 background: linear-gradient(120deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.12));
                 pointer-events: none;
             }
@@ -176,105 +181,267 @@
                 padding: 60px 30px;
                 box-shadow: 0 10px 35px rgba(0, 0, 0, 0.25);
             }
-            /* ==========================
-   EPIC FREIGHT MOBILE FIX
-   ========================== */
-            body {
-                overflow-x: hidden;
-            }
-            img {
-                max-width: 100%;
-                height: auto;
-            }
-            .hero-header {
-                background-position: center !important;
-            }
-            .service-item {
+            </*==========================
+      ABOUT SECTION
+==========================*/
+            >>>>.about-section {
+                padding: 100px 0;
+                background: transparent;
                 position: relative;
                 overflow: hidden;
-                border-radius: 20px;
             }
-            @media (max-width:991px) {
-                .hero-navbar {
-                    min-height: auto;
-                    margin: 10px;
-                    border-radius: 25px;
+            /* Heading */
+            .section-title {
+                position: relative;
+                display: inline-block;
+                font-size: 3rem;
+                font-weight: 800;
+                color: #0d6efd;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+            }
+            .section-title::before,
+            .section-title::after {
+                content: "";
+                position: absolute;
+                top: 50%;
+                width: 170px;
+                height: 3px;
+                background: #0d6efd;
+                box-shadow: 0 0 20px #0d6efd;
+            }
+            .section-title::before {
+                right: 115%;
+            }
+            .section-title::after {
+                left: 115%;
+            }
+            /*==========================
+      IMAGE FRAME
+==========================*/
+            .glass-image-box {
+                position: relative;
+                padding: 18px;
+                border-radius: 25px;
+                background: linear-gradient(145deg, rgba(255, 255, 255, .16), rgba(255, 255, 255, .03));
+                border: 2px solid rgba(255, 255, 255, .18);
+                backdrop-filter: blur(25px);
+                box-shadow: inset 0 2px 10px rgba(255, 255, 255, .15), 0 0 25px rgba(0, 119, 255, .4), 0 20px 60px rgba(0, 0, 0, .5);
+            }
+            /* bolts */
+            .glass-image-box::before {
+                content: "";
+                position: absolute;
+                inset: 0;
+                pointer-events: none;
+                background: radial-gradient(circle at 35px 35px, #d8d8d8 0 8px, #888 9px, #f7f7f7 11px, #888 13px, transparent 15px), radial-gradient(circle at calc(100% - 35px) 35px, #d8d8d8 0 8px, #888 9px, #f7f7f7 11px, #888 13px, transparent 15px), radial-gradient(circle at 35px calc(100% - 35px), #d8d8d8 0 8px, #888 9px, #f7f7f7 11px, #888 13px, transparent 15px), radial-gradient(circle at calc(100% - 35px) calc(100% - 35px), #d8d8d8 0 8px, #888 9px, #f7f7f7 11px, #888 13px, transparent 15px);
+            }
+            .glass-image-box img {
+                width: 100%;
+                height: 650px;
+                object-fit: cover;
+                border-radius: 20px;
+                border: 2px solid rgba(255, 255, 255, .25);
+            }
+            /*==========================
+      CONTENT
+==========================*/
+            .about-section h1 {
+                font-size: 3rem;
+                font-weight: 800;
+                line-height: 1.2;
+            }
+            .about-section p {
+                font-size: 18px;
+                line-height: 1.9;
+                color: #d9d9d9;
+            }
+            /*==========================
+      STATS
+==========================*/
+            .glass-card {
+                height: 220px;
+                border-radius: 20px;
+                padding: 35px;
+                display: flex;
+                align-items: center;
+                gap: 25px;
+                background: linear-gradient(160deg, rgba(255, 255, 255, .10), rgba(255, 255, 255, .02));
+                border: 1px solid rgba(255, 255, 255, .18);
+                backdrop-filter: blur(18px);
+                box-shadow: 0 0 25px rgba(0, 119, 255, .25), inset 0 0 12px rgba(255, 255, 255, .08);
+                position: relative;
+                overflow: hidden;
+                transition: .4s;
+            }
+            /* blue line */
+            .glass-card::before {
+                content: "";
+                position: absolute;
+                left: 28px;
+                top: 30px;
+                width: 8px;
+                height: 110px;
+                border-radius: 10px;
+                background: #0d6efd;
+                box-shadow: 0 0 20px #0d6efd;
+            }
+            .glass-card:hover {
+                transform: translateY(-10px);
+                box-shadow: 0 0 40px rgba(0, 119, 255, .45);
+            }
+            .number {
+                margin-left: 35px;
+                font-size: 82px;
+                font-weight: 900;
+                color: #0d6efd;
+                line-height: 1;
+                text-shadow: 0 0 15px rgba(13, 110, 253, .45);
+            }
+            .glass-card h5 {
+                font-size: 32px;
+                font-weight: 700;
+                margin-bottom: 0;
+                color: white;
+            }
+            .glass-card p {
+                font-size: 18px;
+                letter-spacing: 3px;
+                text-transform: uppercase;
+                margin: 0;
+            }
+            /*==========================
+      BUTTON
+==========================*/
+            .about-section .btn {
+                margin-top: 45px;
+                padding: 16px 60px;
+                font-size: 22px;
+                font-weight: 700;
+                border: none;
+                border-radius: 15px;
+                background: linear-gradient(180deg, #1877ff, #0047d6);
+                box-shadow: 0 12px 35px rgba(13, 110, 253, .45);
+                transition: .35s;
+            }
+            .about-section .btn:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 20px 45px rgba(13, 110, 253, .65);
+            }
+            /*==========================
+      MOBILE
+==========================*/
+            @media(max-width:992px) {
+                .glass-image-box img {
+                    height: 420px;
                 }
-                .navbar {
-                    margin: 10px;
-                    padding: 12px !important;
+                .section-title {
+                    font-size: 2.3rem;
                 }
-                .navbar-brand {
-                    width: 100%;
-                    text-align: center;
+                .section-title::before,
+                .section-title::after {
+                    display: none;
                 }
-                .semi-logo {
-                    width: 65px;
-                    height: 65px;
-                    margin: auto;
+                .about-section h1 {
+                    font-size: 2.2rem;
                 }
-                .company-title {
-                    font-size: 1rem;
-                    width: 100%;
-                    text-align: center;
-                    line-height: 1.4;
-                    margin: 10px 0 !important;
+                .glass-card {
+                    height: auto;
                 }
-                .navbar-collapse {
-                    text-align: center;
-                    margin-top: 15px;
+                .number {
+                    font-size: 60px;
                 }
-                .navbar-nav .nav-link {
-                    display: block;
-                    padding: 12px 0;
-                }
-                .glass-panel {
-                    padding: 25px 15px;
-                    margin: 10px;
-                    border-radius: 15px;
-                }
-                .display-3 {
-                    font-size: 2rem !important;
-                    line-height: 1.2;
-                }
-                .lead {
-                    font-size: 1rem;
-                }
-                .btn-track,
-                .btn-primary,
-                .btn-outline-light {
-                    width: 100%;
-                    margin-bottom: 10px;
-                }
-                .tracking-section {
-                    margin: 10px;
-                    padding: 25px 15px;
-                    border-radius: 25px;
-                }
-                .tracking-form {
-                    flex-direction: column;
-                }
-                .tracking-form input {
-                    width: 100%;
-                    margin-bottom: 10px;
-                }
-                .tracking-form button {
-                    width: 100%;
-                }
-                .service-item {
-                    min-height: auto;
-                    margin-bottom: 15px;
-                }
-                .footer {
-                    text-align: center;
-                }
-                .footer .btn-link {
-                    display: block;
-                    padding: 5px 0;
-                }
-                .copyright {
-                    text-align: center !important;
-                }
+            }
+            /* ================= GLASS STAT CARD ================= */
+            .glass-card {
+                position: relative;
+                height: 220px;
+                border-radius: 22px;
+                overflow: hidden;
+                display: flex;
+                align-items: center;
+                padding: 35px;
+                background: rgba(255, 255, 255, .08);
+                border: 1px solid rgba(255, 255, 255, .18);
+                backdrop-filter: blur(20px);
+                -webkit-backdrop-filter: blur(20px);
+                box-shadow: inset 0 1px 8px rgba(255, 255, 255, .15), 0 0 25px rgba(13, 110, 253, .25);
+                transition: .4s;
+            }
+            .glass-card:hover {
+                transform: translateY(-8px);
+                box-shadow: inset 0 1px 10px rgba(255, 255, 255, .18), 0 0 40px rgba(13, 110, 253, .45);
+            }
+            /* Blue vertical line */
+            .glass-line {
+                width: 8px;
+                height: 120px;
+                border-radius: 20px;
+                background: #0d6efd;
+                box-shadow: 0 0 20px #0d6efd;
+                margin-right: 30px;
+            }
+            /* Text */
+            .glass-content {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+            .number {
+                font-size: 72px;
+                font-weight: 900;
+                color: #0d6efd;
+                line-height: 1;
+                margin-bottom: 12px;
+            }
+            .glass-content h4 {
+                color: #fff;
+                font-size: 2rem;
+                font-weight: 700;
+                margin-bottom: 5px;
+            }
+            .glass-content span {
+                color: #ddd;
+                letter-spacing: 4px;
+                font-size: 18px;
+                font-weight: 600;
+            }
+            /* Metallic corner screws */
+            .glass-card::before,
+            .glass-card::after {
+                content: "";
+                position: absolute;
+                width: 18px;
+                height: 18px;
+                border-radius: 50%;
+                background: radial-gradient(circle, #ffffff 10%, #bfbfbf 40%, #666 100%);
+                box-shadow: 0 0 5px rgba(255, 255, 255, .5);
+            }
+            .glass-card::before {
+                top: 12px;
+                left: 12px;
+            }
+            .glass-card::after {
+                top: 12px;
+                right: 12px;
+            }
+            .glass-card .glass-content::before,
+            .glass-card .glass-content::after {
+                content: "";
+                position: absolute;
+                width: 18px;
+                height: 18px;
+                border-radius: 50%;
+                background: radial-gradient(circle, #ffffff 10%, #bfbfbf 40%, #666 100%);
+                box-shadow: 0 0 5px rgba(255, 255, 255, .5);
+            }
+            .glass-card .glass-content::before {
+                bottom: 12px;
+                left: 12px;
+            }
+            .glass-card .glass-content::after {
+                bottom: 12px;
+                right: 12px;
             }
         }
     </style>
@@ -292,41 +459,31 @@
                     <img src="img/m00.jpg" alt="EPIC Freight">
                 </div>
             </a>
-
             <!-- Company Name -->
             <h1 class="company-title m-0">
-                <i class="fa fa-truck-fast me-3"></i> EPIC FREIGHT SOLUTIONS LTD
+                <i class="fa fa-truck-fast me-2"></i> EPIC FREIGHT SOLUTIONS LTD
             </h1>
-
             <!-- Mobile Toggle -->
             <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="fa fa-bars"></span>
         </button>
-
             <!-- Menu -->
             <div class="collapse navbar-collapse" id="navbarCollapse">
-
                 <div class="navbar-nav ms-auto py-0 pe-4">
                     <a href="index.html" class="nav-item nav-link active">Home</a>
                     <a href="about.html" class="nav-item nav-link">About</a>
                     <a href="services.html" class="nav-item nav-link">Services</a>
                     <a href="tracking.html" class="nav-item nav-link">Tracking</a>
                     <a href="contact.html" class="nav-item nav-link">Contact</a>
+                     <a href="login.html" class="nav-item nav-link">Login</a>
                 </div>
-
                 <a href="tracking.html" class="btn btn-primary btn-track">
                 Track Shipment
             </a>
-
             </div>
-
         </nav>
-
     </div>
-
-
     <div class="container-xxl py-5 bg-burl hero-header mb-5">
-
         <div class="container-xxl py-5 hero-header mb-5" style="
         background:
         linear-gradient(rgba(1, 1, 1, 0.5), rgba(11, 11, 11, 0.5)),
@@ -334,130 +491,115 @@
         background-size: cover;
         background-position: middle;
         background-repeat: no-repeat;
-        min-height: 00px;
-     ">
-
+        min-height: 00px;">
             <!-- your content stays here -->
             <div class="text-center text-white py-5 glass-panel">
-
-                <h1 class="display-3 fw-bold">
-                    Move Cargo,<br>Move the World
-                </h1>
-
-                <p class="lead">
-                    Fast, secure, global logistics solutions.
-                </p>
-
-
-
-            </div>
-            <p class="text-white mb-4 pb-2">
-                EPIC FREIGHT SOLUTIONS LTD delivers end-to-end logistics, freight forwarding and shipping solutions across air, sea and land fast, secure, and on time, every time.
-            </p>
-            <a href="services.html" class="btn btn-primary py-sm-3 px-sm-5 me-3">
-                    Our Services
-                </a>
-            <a href="contact.html" class="btn btn-outline-light py-sm-3 px-sm-5">
-                    Get a Quote
-                </a>
-
-        </div>
-
-    </div>
-
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
-
-    <!-- Services -->
-    <div class="container-xxl py-5 ">
-        <div class="container ">
-            <div class="text-center mb-5 ">
-                <h2 class="section-title text-primary fw-normal ">What We Do</h2>
-                <h1 class="text-primary mb-50 ">Our Logistics Services</h1>
-            </div>
-            <div class="row g-4 ">
-                <div class="col-lg-3 col-sm-6 ">
-                    <div class="service-item rounded pt-3 text-center ">
-                        <div class="p-4 ">
-                            <i class="fa fa-3x fa-ship text-primary mb-4 "></i>
-                            <h5 class="text-white ">Sea Freight</h5>
-                            <p class="text-white ">FCL and LCL ocean shipping to ports worldwide with full tracking.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6 ">
-                    <div class="service-item rounded pt-3 text-center ">
-                        <div class="p-4 ">
-                            <i class="fa fa-3x fa-plane text-primary mb-4 "></i>
-                            <h5 class="text-white ">Air Freight</h5>
-                            <p class="text-white ">Express air cargo for urgent, time-sensitive shipments globally.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6 ">
-                    <div class="service-item rounded pt-3 text-center ">
-                        <div class="p-4 ">
-                            <i class="fa fa-3x fa-truck text-primary mb-4 "></i>
-                            <h5 class="text-white ">Road Transport</h5>
-                            <p class="text-white ">Reliable trucking and last-mile delivery across the region.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6 ">
-                    <div class="service-item rounded pt-3 text-center ">
-                        <div class="p-4 ">
-                            <i class="fa fa-3x fa-warehouse text-primary mb-4 "></i>
-                            <h5 class="text-white ">Warehousing</h5>
-                            <p class="text-white ">Secure storage, inventory management and distribution centers.</p>
-                        </div>
-                    </div>
-                </div>
+                <h1 class="display-3 hero-title">Move Cargo,<br> Move the World</h1>
+                <p class="lead">Fast, secure, global logistics solutions.</p>
+                <p class="text-white mb-4 pb-2">EPIC FREIGHT SOLUTIONS LTD delivers end-to-end logistics, freight forwarding and shipping solutions across air, sea and land fast, secure, and on time, every time.</p>
+                <a href="services.html" class="btn btn-primary py-sm-3 px-sm-5 me-3">Our Services</a>
+                <a href="contact.html" class="btn btn-outline-light py-sm-3 px-sm-5">Get a Quote</a>
             </div>
         </div>
     </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
 
-    <!-- About -->
-    <div class="container-xxl py-5 ">
-        <div class="container ">
-            <div class="row g-5 align-items-center ">
-                <div class="col-lg-6 ">
-                    <img class="img-fluid rounded w-100 " src="img/m1.jpg " alt="EPIC FREIGHT SOLUTIONS LTD warehouse ">
-                </div>
-                <div class="col-lg-6 ">
-                    <h1 class="section-title text-start text-primary fw-normal ">ABOUT US</h1>
-                    <h1 class="text-white mb-4 ">Welcome to <i class="fa fa-truck-fast text-primary me-2 "></i>EPIC FREIGHT SOLUTIONS LTD</h1>
-                    <p class="text-white mb-4 ">EPIC FREIGHT SOLUTIONS LTD is a full-service logistics partner combining global reach with local expertise. We help businesses move freight smarter from first pickup to final delivery.</p>
-                    <p class="text-white mb-4 ">With a network of carriers, customs experts and warehouses, we tailor supply chain solutions that cut cost and lead time.</p>
-                    <div class="row g-4 mb-4 ">
-                        <div class="col-sm-6 ">
-                            <div class="d-flex align-items-center border-start border-5 border-primary px-3 ">
-                                <h1 class="display-5 text-primary mb-0 ">20+</h1>
-                                <div class="ps-4 ">
-                                    <p class="text-white mb-0 ">Countries</p>
-                                    <h6 class="text-white text-uppercase mb-0 ">Served</h6>
+    <!-- ================= ABOUT SECTION ================= -->
+    <section class="about-section py-5">
+        <div class="container">
+
+            <!-- Section Title -->
+            <div class="text-center mb-5">
+                <h1 class="text-primary mb-5">ABOUT US</h1>
+            </div>
+
+            <div class="row align-items-center g-5">
+
+                <!-- Left Image -->
+               <div class="col-lg-5">
+    <div class="glass-video-box">
+        <!-- Replace image with video -->
+        <video class="img-fluid" autoplay muted loop playsinline>
+            <source src="img/v1.mp4" type="video/mp4">
+            <source src="img/v.mp4" type="video/webm">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+</div>
+
+                <!-- Right Content -->
+                <div class="col-lg-7">
+
+                    <h1 class="display-5 fw-bold text-white mb-4">
+                        Welcome to
+                        <i class="fa-solid fa-truck-fast text-primary"></i> EPIC FREIGHT SOLUTIONS LTD
+                    </h1>
+
+                    <p class="text-light mb-4">
+                        <strong>EPIC FREIGHT SOLUTIONS LTD</strong> is a trusted international logistics and freight forwarding company committed to delivering reliable, cost-effective and innovative transportation solutions for businesses of every size.
+                        Combining global reach with local expertise, we ensure every shipment arrives safely, securely and on schedule.
+                    </p>
+
+                    <p class="text-light mb-4">
+                        Our services include air freight, ocean freight, road transport, customs clearance, warehousing, cargo consolidation and last-mile delivery. Supported by an extensive network of international partners, experienced logistics specialists and modern technology,
+                        we provide complete end-to-end supply chain solutions that reduce transit times, lower operational costs and give our clients full visibility throughout the shipping process.
+                    </p>
+
+                    <p class="text-light mb-5">
+                        Whether you're shipping locally or across continents, EPIC FREIGHT SOLUTIONS LTD delivers dependable logistics solutions tailored to your business, helping you move cargo efficiently while keeping your operations running smoothly.
+                    </p>
+
+                    <!-- Statistics -->
+                    <div class="row g-4 mt-2">
+
+                        <!-- Countries -->
+                        <div class="col-md-6">
+                            <div class="glass-card">
+
+                                <div class="glass-line"></div>
+
+                                <div class="text-light mb-4">
+                                    <h1 class="number">20+</h1>
+                                    <h4>Countries</h4>
+                                    <span>SERVED</span>
                                 </div>
+
                             </div>
                         </div>
-                        <div class="col-sm-6 ">
-                            <div class="d-flex align-items-center border-start border-5 border-primary px-3 ">
-                                <h1 class="display-5 text-primary mb-0 ">50K</h1>
-                                <div class="ps-4 ">
-                                    <p class="text-white mb-0 ">Shipments</p>
-                                    <h6 class="text-white text-uppercase mb-0 ">Delivered</h6>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <a class="btn btn-primary py-3 px-5 mt-2 " href="about.html ">Read More</a>
-                </div>
-            </div>
-        </div>
-    </div>
 
+                        <!-- Shipments -->
+                        <div class="col-md-6">
+                            <div class="glass-card">
+
+                                <div class="glass-line"></div>
+
+                                <div class="text-light mb-4">
+                                    <h1 class="number">50K</h1>
+                                    <h4 >Shipments</h4>
+                                    <span>DELIVERED</span>
+                                </div>
+
+                            </div>
+                </div>
+
+        </div>
+
+        <!-- Button -->
+        <a href="about.html" class="btn btn-primary mt-5">
+                    READ MORE
+                    <i class="fa-solid fa-arrow-right ms-2"></i>
+                </a>
+
+        </div>
+
+        </div>
+
+        </div>
+    </section>
     <!-- Tracking CTA -->
     <style>
         .tracking-section {
@@ -513,7 +655,104 @@
         .tracking-form button:hover {
             transform: translateY(-3px);
         }
+        /* Glass Service Cards */
+        
+        .service-item {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 20px !important;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25), inset 0 1px 1px rgba(255, 255, 255, 0.2);
+            transition: all 0.4s ease;
+            overflow: hidden;
+            height: 100%;
+        }
+        /* Hover Effect */
+        
+        .service-item:hover {
+            transform: translateY(-10px);
+            border-color: rgba(13, 110, 253, 0.6);
+            box-shadow: 0 20px 40px rgba(13, 110, 253, 0.25), inset 0 1px 1px rgba(255, 255, 255, 0.3);
+        }
+        /* Icon Glow */
+        
+        .service-item i {
+            transition: all 0.4s ease;
+        }
+        
+        .service-item:hover i {
+            transform: scale(1.2);
+            text-shadow: 0 0 20px rgba(13, 110, 253, 0.8);
+        }
+        /* Optional Glass Shine */
+        
+        .service-item::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -120%;
+            width: 60%;
+            height: 100%;
+            background: linear-gradient( 90deg, transparent, rgba(255, 255, 255, 0.15), transparent);
+            transition: 0.8s;
+        }
+        
+        .service-item:hover::before {
+            left: 150%;
+        }
+        
+        .service-item {
+            position: relative;
+        }
     </style>
+    <!-- Services -->
+    <div class="container-xxl py-5 ">
+        <div class="container ">
+            <div class="text-center mb-5 ">
+                <h2 class="section-title text-primary fw-normal ">What We Do</h2>
+                <h1 class="text-primary mb-50 ">Our Logistics Services</h1>
+            </div>
+            <div class="row g-4 ">
+                <div class="col-lg-3 col-sm-6 ">
+                    <div class="service-item rounded pt-3 text-center ">
+                        <div class="p-4 ">
+                            <i class="fa fa-3x fa-ship text-primary mb-4 "></i>
+                            <h5 class="text-white ">Sea Freight</h5>
+                            <p class="text-white ">FCL and LCL ocean shipping to ports worldwide with full tracking.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 ">
+                    <div class="service-item rounded pt-3 text-center ">
+                        <div class="p-4 ">
+                            <i class="fa fa-3x fa-plane text-primary mb-4 "></i>
+                            <h5 class="text-white ">Air Freight</h5>
+                            <p class="text-white ">Express air cargo for urgent, time-sensitive shipments globally.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 ">
+                    <div class="service-item rounded pt-3 text-center ">
+                        <div class="p-4 ">
+                            <i class="fa fa-3x fa-truck text-primary mb-4 "></i>
+                            <h5 class="text-white ">Road Transport</h5>
+                            <p class="text-white ">Reliable trucking and last-mile delivery across the region.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 ">
+                    <div class="service-item rounded pt-3 text-center ">
+                        <div class="p-4 ">
+                            <i class="fa fa-3x fa-warehouse text-primary mb-4 "></i>
+                            <h5 class="text-white ">Warehousing</h5>
+                            <p class="text-white ">Secure storage, inventory management and distribution centers.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div class="container-xxl py-5 tracking-section ">
         <div class="container ">
@@ -521,7 +760,7 @@
 
                 <div class="col-lg-6 ">
                     <h1 class="text-white mb-3 ">
-                        <i class="fa fa-location-dot me-2 "></i> Track Your Shipment
+                        <i class="fa fa-location-dot me-2 "></i> BOOK Your Shipment
                     </h1>
 
                     <p class="text-white-50 mb-0 ">
@@ -535,7 +774,7 @@
                         <input class="form-control form-control-lg me-2 " type="text " placeholder="e.g. SPD-1029384 ">
 
                         <button class="btn btn-primary px-4 " type="submit ">
-                        Track
+                        BOOK
                     </button>
 
                     </form>
@@ -543,50 +782,194 @@
             </div>
         </div>
     </div>
+    <!-- Company Logo Circle -->
+    <style>
+        .partner-slider {
+            width: 100vw;
+            overflow: hidden;
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 30px 0;
+        }
+        
+        .partner-track {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            width: max-content;
+            animation: fullMarquee 25s linear infinite;
+        }
+        
+        .partner-slider::before,
+        .partner-slider::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            width: 150px;
+            height: 100%;
+            z-index: 2;
+        }
+        
+        .partner-slider::before {
+            left: 0;
+            background: linear-gradient(to right, #000, transparent);
+        }
+        
+        .partner-slider::after {
+            right: 0;
+            background: linear-gradient(to left, #000, transparent);
+        }
+        
+        @keyframes fullMarquee {
+            0% {
+                transform: translateX(100vw);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+        
+        .partner-item {
+            flex-shrink: 0;
+            text-align: center;
+            margin: 0 30px;
+        }
+        
+        .circle-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            overflow: hidden;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 2px solid #f1f2f4;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, .25), inset 0 1px 1px rgba(255, 255, 255, .4);
+            transition: all .4s ease;
+        }
+        
+        .circle-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .circle-image:hover {
+            transform: translateY(-10px) scale(1.1);
+            box-shadow: 0 15px 40px rgba(13, 110, 253, .4), inset 0 1px 1px rgba(255, 255, 255, .6);
+        }
+        
+        .partner-track:hover {
+            animation-play-state: paused;
+        }
+    </style>
 
-    <!-- Footer -->
-    <div class="container-fluid bg-dark text-light footer pt-5 mt-5 ">
-        <div class="container py-5 ">
-            <div class="row g-5 ">
-                <div class="col-lg-3 col-md-6 ">
-                    <h4 class="text-white mb-4 ">Company</h4>
-                    <a class="btn btn-link " href="about.html ">About Us</a>
-                    <a class="btn btn-link " href="contact.html ">Contact Us</a>
-                    <a class="btn btn-link " href="services.html ">Our Services</a>
-                </div>
-                <div class="col-lg-3 col-md-6 ">
-                    <h4 class="text-white mb-4 ">Contact</h4>
-                    <p class="mb-2 "><i class="fa fa-map-marker-alt me-3 "></i>123 Harbor Rd, Port City</p>
-                    <p><i class="fa fa-phone-alt me-3 "></i><a href="tel:+233 20 935 1845 / +233 26 411 1698 ">+233 20 935 1845</a> / <a href="tel:+233 20 935 1845 / +233 26 411 1698 ">+233 26 411 1698</a> </p>
-                    <p> <i class="fa fa-envelope me-3 "></i><a href="mailto:salesepicfreightsolutionsltd@gmail.com ">info@epicfreightsolutionsltd.com</a></p>
-                </div>
-                <div class="col-lg-3 col-md-6 ">
-                    <h4 class="text-white mb-4 ">Opening Hours</h4>
-                    <h6 class="text-light ">Mon - Fri: 08AM - 09PM</h6>
-                    <h6 class="text-light ">Sat - Sun: 10AM - 08PM</h6>
-                </div>
-                <div class="col-lg-3 col-md-6 ">
-                    <h4 class="text-white mb-4 ">Newsletter</h4>
-                    <p>Get shipping rates and updates in your inbox.</p>
-                    <div class="position-relative mx-auto ">
-                        <input class="form-control border-primary w-100 py-3 ps-4 pe-5 " type="text " placeholder="Your email ">
-                        <button type="button " class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2 ">Sign Up</button>
+    <!-- Company Logo Circle -->
+    <div class="container-xxl py-5 ">
+        <div class="container ">
+            <div class="text-center mb-5 ">
+                <h2 class="section-title text-primary fw-normal ">Alinede Wiht </h2>
+                <h1 class="text-primary mb-50 ">We work with</h1>
+            </div>
+            <div class="partner-slider">
+                <div class="partner-track">
+                    <div class="partner-item">
+                        <div class="circle-image">
+                            <img src="img/1GH-INSTITUTE-OF-FREIGHT.png" alt="INSTITUTE-OF-FREIGHT">
+                        </div>
+                        <h5 class="text-white mb-50 ">INSTITUTE-OF-FREIGHT</h5>
+                    </div>
+
+                    <div class="partner-item">
+                        <div class="circle-image">
+                            <img src="img/1GH-MARITIMEo.png" alt="MSC">
+                        </div>
+                        <h5 class="text-white mb-50 ">MSC</h5>
+                    </div>
+
+                    <div class="partner-item">
+                        <div class="circle-image">
+                            <img src="img/OIP.jpg" alt="CMA CGM">
+                        </div>
+                        <h5 class="text-white mb-50 ">CMA CGM</h5>
+                    </div>
+
+                    <div class="partner-item">
+                        <div class="circle-image">
+                            <img src="img/1MINERAL-COMMISSION-GH.png" alt="Hapag-Lloyd">
+                        </div>
+                        <h5 class="text-white mb-50 ">Hapag-Lloyd</h5>
+                    </div>
+
+                    <div class="partner-item">
+                        <div class="circle-image">
+                            <img src="img/2BANK-OF-GHANA.png" alt="Hapag-Lloyd">
+                        </div>
+                        <h5 class="text-white mb-50 ">Hapag-Lloyd</h5>
+                    </div>
+
+                    <div class="partner-item">
+                        <div class="circle-image">
+                            <img src="img/FIATA.png" alt="Hapag-Lloyd">
+                        </div>
+                        <h5 class="text-white mb-50 ">Hapag-Lloyd</h5>
+                    </div>
+
+                    <div class="partner-item">
+                        <div class="circle-image">
+                            <img src="img/Ghapoha-165x120.png" alt="Hapag-Lloyd">
+                        </div>
+                        <h5 class="text-white mb-50 ">Hapag-Lloyd</h5>
+                    </div>
+                    <div class="partner-item">
+                        <div class="circle-image">
+                            <img src="img/MPS-TEME-PORT.png" alt="Hapag-Lloyd">
+                        </div>
+                        <h5 class="text-white mb-50 ">Hapag-Lloyd</h5>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="container ">
-            <div class="copyright ">
-                <div class="row ">
-                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0 ">&copy; <a class="border-bottom " href="# ">EPIC FREIGHT SOLUTIONS LTD</a>, All Rights Reserved.</div>
+    </div>
+    </div>
+
+    <div class="container-fluid bg-dark text-light footer pt-5 mt-5">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-4">
+                    <h4 class="text-white mb-4">EPIC FREIGHT SOLUTIONS LTD</h4>
+                    <p>Global logistics & shipping solutions.</p>
+                </div>
+
+                <div class="col-lg-4">
+                    <h4 class="text-white mb-4">Contact</h4>
+                    <p><i class="fa fa-phone-alt me-3"></i><a href="tel:+233 20 935 1845 / +233 26 411 1698">+233 20 935 1845</a> / <a href="tel:+233 20 935 1845 / +233 26 411 1698">+233 26 411 1698</a></p>
+                    <p><i class="fa fa-envelope me-3"></i><a href="mailto:salesepicfreightsolutionsltd@gmail.com">salesepicfreightsolutionsltd@gmail.com</a></p>
+                </div>
+                <div class="col-lg-4">
+                    <h4 class="text-white mb-4">Links</h4>
+                    <a class="btn btn-link" href="about.html">About</a>
+                    <a class="btn btn-link" href="services.html">Services</a>
+                    <a class="btn btn-link" href="contact.html">Contact</a>
                 </div>
             </div>
+            <div class="copyright">&copy; <a href="#">EPIC FREIGHT SOLUTIONS LTD</a>, All Rights Reserved.</div>
         </div>
     </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById('trackForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            var v = document.getElementById('trackNo').value.trim() || 'SPD-1029384';
+            document.getElementById('resultId').textContent = v;
+            document.getElementById('result').classList.remove('d-none');
+        });
+    </script>
+</body>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js "></script>
-
+</html>
+</script>
 </body>
 
 </html>
